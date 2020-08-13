@@ -18,6 +18,7 @@ require (
 	github.com/libp2p/go-libp2p-net v0.1.0
 	github.com/libp2p/go-libp2p-peer v0.2.0
 	github.com/libp2p/go-libp2p-peerstore v0.2.6
+	github.com/libp2p/go-libp2p-quic-transport v0.7.1 // indirect
 	github.com/libp2p/go-libp2p-swarm v0.2.8
 	github.com/libp2p/go-netroute v0.1.3
 	github.com/multiformats/go-multiaddr v0.2.2

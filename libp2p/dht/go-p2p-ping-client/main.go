@@ -3,13 +3,15 @@ package main
 import (
 	"context"
 	"crypto/rand"
+	"log"
+	"os"
+
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p-core/crypto"
 	"github.com/libp2p/go-libp2p-core/peer"
 	libp2pquic "github.com/libp2p/go-libp2p-quic-transport"
 	"github.com/libp2p/go-libp2p/p2p/protocol/ping"
 	"github.com/multiformats/go-multiaddr"
-	"log"
 )
 
 func main() {
@@ -49,8 +51,9 @@ func main() {
 	}
 	log.Println("节点P2P地址:", p2pAddrs)
 
-	//连接到指定地址并发送ping
-	ma, e := multiaddr.NewMultiaddr("/ip4/127.0.0.1/udp/60000/quic/ipfs/QmQk4ej59ncF23q4DY9h2r841y973fB69QHknVpFPc5F7j")
+	pingAddr := os.Args[1]
+	//连接到指定地址并发送ping  /ip4/127.0.0.1/udp/60000/quic/ipfs/QmPJPhaVqmnh94u85avjWbAFir5PQpXS2RtAQVGTAoW4W7
+	ma, e := multiaddr.NewMultiaddr(pingAddr)
 	if e != nil {
 		log.Fatalln(e)
 	}
@@ -63,7 +66,7 @@ func main() {
 		log.Fatalln(e)
 	}
 	ch := pingService.Ping(ctx, addr.ID)
-	res := <- ch
+	res := <-ch
 	log.Println("Pint RTT:", res.RTT)
 
 	e = node.Close()

@@ -16,16 +16,17 @@ $ go build -o dht
 运行程序1
 ```bash
 $ ./dht
-2019/11/11 15:17:02 节点P2P地址: [/ip4/127.0.0.1/tcp/38133/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX /ip4/192.168.1.200/tcp/38133/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX /ip4/192.168.122.1/tcp/38133/iQmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX /ip4/172.17.0.1/tcp/38133/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX /ip6/::1/tcp/37939/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX]
+2020/08/13 15:17:02 节点P2P地址: [/ip4/127.0.0.1/tcp/38133/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX /ip4/192
+.168.1.200/tcp/38133/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX /ip4/192.168.122.1/tcp/38133/iQmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX /ip4/172.17.0.1/tcp/38133/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX /ip6/::1/tcp/37939/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX]
 ```
 
 运行程序2
 ```bash
 $ ./dht --bootstrap="/ip4/127.0.0.1/tcp/38133/ipfs/QmS1BCwGa4yCTcaRsg6xopoL2vwso5ZHWP2QetAUEk9ohX"
-2019/11/11 17:23:56 已经发送
-2019/11/11 17:23:58 处理流: /ip4/27.17.7.86/udp/22509/quic
-2019/11/11 17:23:58 读取内容: 你好, DHT节点
-2019/11/11 17:23:58 结果已经返回
+2020/08/13 17:23:56 已经发送
+2020/08/13 17:23:58 处理流: /ip4/27.17.7.86/udp/22509/quic
+2020/08/13 17:23:58 读取内容: 你好, DHT节点
+2020/08/13 17:23:58 结果已经返回
 ```
 
 > 注意: 互联网中必须出现至少一次交叉连接, 节点才能相互发现. 比如节点a连启发节点, 节点b连启发节点, 则节点a和b无法相互发现. 但如果节点a连启发节点, 节点b连a, 则3个节点可以相互发现.
