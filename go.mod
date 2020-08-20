@@ -4,6 +4,7 @@ go 1.12
 
 require (
 	github.com/davecgh/go-spew v1.1.1
+	github.com/garyburd/redigo v1.6.2
 	github.com/ipfs/go-ipfs-util v0.0.2
 	github.com/ipfs/go-log v1.0.4
 	github.com/jbenet/goprocess v0.1.4
@@ -28,4 +29,5 @@ require (
 	github.com/stretchr/testify v1.6.1
 	github.com/whyrusleeping/go-logging v0.0.0-20170515211332-0457bb6b88fc
 	github.com/whyrusleeping/mdns v0.0.0-20190826153040-b9b60ed33aa9
+	github.com/willf/bitset v1.1.11
 )
